@@ -1,6 +1,6 @@
 import './Home.css'
 import { useNavigate } from 'react-router-dom'
-
+import Card from '../Components/Card/Card'
 
 
 function Home() {
@@ -16,6 +16,7 @@ function Home() {
                 <h1 className='home-view__h1'>E-WALLET</h1>
             </header>
             <p className='home-view__p'>ACTIVE CARD</p>
+            
             <section className='home-view__card'>
                 <article className='home-view__card__img'>
                     <div>
@@ -50,6 +51,8 @@ function Home() {
                     <h2 className='home-view__card__label__h2'>10/10</h2>
                 </article>
             </section>
+            
+            < Card/>
 
             <button onClick={ navigateAdd }>ADD NEW CARD</button>
         </section>

@@ -1,0 +1,19 @@
+.addcard-view {
+    width: 360px;
+    height: 890px;
+    background-color: beige;
+}
+
+.cardform {
+
+}
+
+.cardform-upper {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.cardform-lower {
+    display: flex;
+}
