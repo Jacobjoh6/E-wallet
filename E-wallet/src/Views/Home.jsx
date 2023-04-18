@@ -1,6 +1,7 @@
 import './Home.css'
 import { useNavigate } from 'react-router-dom'
 import Card from '../Components/Card/Card'
+import CardStack from '../Components/CardStack/CardStack'
 
 
 function Home() {
@@ -52,7 +53,7 @@ function Home() {
                 </article>
             </section>
             
-            < Card/>
+            < CardStack />
 
             <button onClick={ navigateAdd }>ADD NEW CARD</button>
         </section>

@@ -1,24 +1,30 @@
 import './AddCard.css'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import Card from '../Components/Card/Card';
-
+import { addCard } from '../action';
 
 function AddCard() {
-    const [cardnr, setCardnr] = useState('')
-    const [name, setName]     = useState('')
-    const [date, setDate]     = useState('')
+    const [cardnr, setCardnr] = useState('XXXX XXXX XXXX XXXX')
+    const [name, setName]     = useState('NAME LASTNAME')
+    const [date, setDate]     = useState('10/10')
     const [ccv, setCcv]       = useState('')
-    const navigate = useNavigate();
+    const [vendor, setVendor] = useState('')
 
-    function handleClick() {
+    const dispatch = useDispatch()
+    const navigate = useNavigate();
         const card = {
             cardnr: cardnr,
             name: name,
             date: date,
-            ccv: ccv
+            ccv: ccv,
+            vendor: vendor
         }
-        navigate('/', {state: {card: card} })
+    function handleClick() {
+
+        navigate('/')
+        dispatch(addCard(card))
     }
     
 
@@ -28,7 +34,8 @@ function AddCard() {
                 <h1 className='home-view__h1'>ADD NEW CARD</h1>
             </header>
             <p className='home-view__p'>NEW CARD</p>
-            <Card />
+
+            < Card fullCard={card}/>
 
             <section className='cardform'>
                 <article className='cardform-upper'>
@@ -43,6 +50,12 @@ function AddCard() {
                     <label htmlFor="card-ccv">CCV</label>
                     <input type="text" id="card-ccv" />
                 </article> 
+                <select name="" id="" onChange={ (event) => setVendor(event.target.value) }>
+                    <option value="bitcoin" className='bitcoin'>Bitcoin</option>
+                    <option value="ninja" className='ninja'>Ninja bank</option>
+                    <option value="blockchain" className='blockchain'>Blockchain</option>
+                    <option value="evil" className='evil'>Evil corp</option>
+                </select>
             </section>
             <button onClick={ handleClick }>ADD CARD</button>
         </section>

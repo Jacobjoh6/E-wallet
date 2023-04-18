@@ -1,39 +1,41 @@
-/* 
 
-.home-view {
-    width: 360px;
-    height: 890px;
-    background-color: beige;
-}
 
-.home-view__h1 {
-    padding: 2rem;
-}
-
-.home-view__p {
-    font-size: 6px;
-}
-
-.home-view__card {
+.card-comp {
     height: 200px;
     width: 340px;
     margin: 10px;
     background-color: #FFAE34;
     border-radius: 8px;
+    /* transform: translate(0px, -100px); */
+}
+.bitcoin {
+    background-color: #FFAE34;
 }
 
-.home-view__card__img {
+.ninja {
+    background-color: #222222;
+}
+
+.blockchain {
+    background-color: #8B58F9;
+}
+
+.evil {
+    background-color: #F33355;
+}
+
+.card-comp__img {
     display: flex;
     justify-content: space-between;
     margin: 1rem;
     padding-top: 1rem;
 }
 
-.home-view__card__numbers {
+.card-comp__numbers {
     margin: 0%;
 }
 
-.home-view__card__label {
+.card-comp__label {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -43,19 +45,19 @@
     margin-bottom: -1rem;
 }
 
-.home-view__card__label__text {
+.card-comp__label__text {
     font-size: 8px;
 }
 
-.home-view__card__info {
+.card-comp__info {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 0;
 }
 
-.home-view__card__label__h2 {
+.card-comp__label__h2 {
     font-size: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
-} */
+}
