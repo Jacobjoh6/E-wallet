@@ -1,7 +1,9 @@
 import './Home.css'
 import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 import Card from '../Components/Card/Card'
 import CardStack from '../Components/CardStack/CardStack'
+import ActiveCard from '../Components/ActiveCard/ActiveCard'
 
 
 function Home() {
@@ -17,8 +19,11 @@ function Home() {
                 <h1 className='home-view__h1'>E-WALLET</h1>
             </header>
             <p className='home-view__p'>ACTIVE CARD</p>
+
+            < ActiveCard />
+            <hr />
             
-            <section className='home-view__card'>
+            {/* <section className='home-view__card'>
                 <article className='home-view__card__img'>
                     <div>
                         <svg width="40" height="64" viewBox="0 0 50 84" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -51,7 +56,7 @@ function Home() {
                     <h2 className='home-view__card__label__h2'>JACOB JOHANSSON</h2>
                     <h2 className='home-view__card__label__h2'>10/10</h2>
                 </article>
-            </section>
+            </section> */}
             
             < CardStack />
 

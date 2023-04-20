@@ -4,10 +4,15 @@
     height: 200px;
     width: 340px;
     margin: 10px;
-    background-color: #FFAE34;
+    background-color: #c1bbb3;
     border-radius: 8px;
     /* transform: translate(0px, -100px); */
 }
+
+.bankOpt{
+    background-color: azure;
+}
+
 .bitcoin {
     background-color: #FFAE34;
 }

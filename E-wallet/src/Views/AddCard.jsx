@@ -48,9 +48,10 @@ function AddCard() {
                     <label htmlFor="card-date">VALID THRU</label>
                     <input type="text" id="card-date" onChange={ (event) => setDate(event.target.value) }/>
                     <label htmlFor="card-ccv">CCV</label>
-                    <input type="text" id="card-ccv" />
+                    <input type="text" id="card-ccv" onChange={ (event) => setCcv(event.target.value) }/>
                 </article> 
                 <select name="" id="" onChange={ (event) => setVendor(event.target.value) }>
+                    <option value="bank" className='bankOpt'>Välj bank</option>
                     <option value="bitcoin" className='bitcoin'>Bitcoin</option>
                     <option value="ninja" className='ninja'>Ninja bank</option>
                     <option value="blockchain" className='blockchain'>Blockchain</option>
@@ -61,5 +62,5 @@ function AddCard() {
         </section>
     )
 }
-// onChange={ (event) => setCcv(event.target.value) }
+// 
 export default AddCard

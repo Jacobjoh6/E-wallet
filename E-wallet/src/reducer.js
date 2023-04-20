@@ -7,15 +7,24 @@ const initialState = {
 
 const reducer =(state = initialState, action) => {
     switch(action.type){
+
         case'ADD':
         return {
+            ...state,
             cards: [...state.cards, action.payload]
         }
 
         case'ACTIVE':
         return {
-            activeCard: [...state.cards, action.payload]
+            ...state,
+            activeCard: action.payload
         }
+
+        case'DELETE':
+        return {
+            cards: state.cards.filter(elem => elem !== action.payload)
+        }
+
         default:
             return state
     }

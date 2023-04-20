@@ -18,4 +18,12 @@ function activeCard(value) {
     }
 }
 
-export { addCard, activeCard }
+function deleteCard(value) {
+    return {
+        type: 'DELETE',
+        payload:
+        value
+    }
+}
+
+export { addCard, activeCard, deleteCard }
