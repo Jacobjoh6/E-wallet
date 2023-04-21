@@ -21,6 +21,7 @@ function Card(props) {
     return(
         <section className={`card-comp ${props.fullCard.vendor}`} onClick={ displayActive }>  
             <article className='card-comp__img'>
+                
                 <div>
                     <svg width="40" height="64" viewBox="0 0 50 84" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect y="44" width="50" height="40" rx="8" fill="#ECE6DF"/>
@@ -37,7 +38,7 @@ function Card(props) {
                         </g>
                     </svg>
                 </div>
-                <button onClick={ removeCard }></button>
+                <button onClick={ removeCard } className='card-comp__btn'>X</button>
                 <div>
                     <img src={`/src/assets/vendor-${props.fullCard.vendor}.svg`} alt="" />
                 </div>

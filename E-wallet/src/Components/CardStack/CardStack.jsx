@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux"
 import Card from "../Card/Card"
+import './CardStack.css'
 
 function CardStack() {
     const cards = useSelector((state)=> {return state.cards})
@@ -9,7 +10,7 @@ function CardStack() {
     })
     
     return(
-        <section>
+        <section className="CardStack">
             {cardComp}
         </section>
     )

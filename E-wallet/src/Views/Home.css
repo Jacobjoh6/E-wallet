@@ -3,7 +3,8 @@
 .home-view {
     width: 360px;
     height: 890px;
-    background-color: beige;
+    background-color: rgb(243, 243, 243);
+
 }
 
 .home-view__h1 {
@@ -58,5 +59,14 @@
     font-size: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
-    
+}
+
+.home-view__btn {
+    background-color: black;
+    color: aliceblue;
+    height: 3rem;
+    border-radius: 4px;
+    border: none;
+    width: 90%;
+    margin: 1rem;
 }

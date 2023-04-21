@@ -39,18 +39,22 @@ function AddCard() {
 
             <section className='cardform'>
                 <article className='cardform-upper'>
-                    <label htmlFor="card-nr" className='cardform-input__label'>CARD NUMBER</label>
-                    <input type="text" id="card-nr" onChange={ (event) => setCardnr(event.target.value) }/>
-                    <label htmlFor="card-name" className='cardform-input__label'>CARDHOLDER NAME</label>
-                    <input type="text" id="card-name" onChange={ (event) => setName(event.target.value) }/>
+                    <h3 htmlFor="card-nr" className='cardform-input__label'>CARD NUMBER</h3>
+                    <input type="text" id="card-nr" className='cardform-input__upper' onChange={ (event) => setCardnr(event.target.value) }/>
+                    <h3 htmlFor="card-name" className='cardform-input__label'>CARDHOLDER NAME</h3>
+                    <input type="text" id="card-name" className='cardform-input__upper' onChange={ (event) => setName(event.target.value) }/>
                 </article>
                 <article className='cardform-lower'>
-                    <label htmlFor="card-date">VALID THRU</label>
-                    <input type="text" id="card-date" onChange={ (event) => setDate(event.target.value) }/>
-                    <label htmlFor="card-ccv">CCV</label>
-                    <input type="text" id="card-ccv" onChange={ (event) => setCcv(event.target.value) }/>
+                    <div className='hje'>
+                        <h3 htmlFor="card-date" className='cardform-input__label'>VALID THRU</h3>
+                        <input type="text" id="card-date" className='cardform-input__lower' onChange={ (event) => setDate(event.target.value) }/>
+                    </div>
+                    <div className='hej'>
+                        <h3 htmlFor="card-ccv" className='cardform-input__label' >CCV</h3>
+                        <input type="text" id="card-ccv" className='cardform-input__lower' onChange={ (event) => setCcv(event.target.value) }/>
+                    </div>
                 </article> 
-                <select name="" id="" onChange={ (event) => setVendor(event.target.value) }>
+                <select name="" id="" className='cardform-select' onChange={ (event) => setVendor(event.target.value) }>
                     <option value="bank" className='bankOpt'>Välj bank</option>
                     <option value="bitcoin" className='bitcoin'>Bitcoin</option>
                     <option value="ninja" className='ninja'>Ninja bank</option>
@@ -58,7 +62,7 @@ function AddCard() {
                     <option value="evil" className='evil'>Evil corp</option>
                 </select>
             </section>
-            <button onClick={ handleClick }>ADD CARD</button>
+            <button onClick={ handleClick } className='cardform-btn'>ADD CARD</button>
         </section>
     )
 }

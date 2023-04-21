@@ -36,6 +36,13 @@
     padding-top: 1rem;
 }
 
+.card-comp__btn {
+    color: #cf4a21;
+    border: none;
+    background-color: none;
+    background: none;
+}
+
 .card-comp__numbers {
     margin: 0%;
 }
